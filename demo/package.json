@@ -1,0 +1,29 @@
+{
+  "nativescript": {
+    "id": "org.nativescript.demo",
+    "tns-ios": {
+      "version": "2.3.0"
+    },
+    "tns-android": {
+      "version": "2.3.0"
+    }
+  },
+  "dependencies": {
+    "assert": "^1.4.1",
+    "buffer-browserify": "^0.2.5",
+    "inherits": "^2.0.3",
+    "nativescript-xmpp-client": "file:..",
+    "node-event-emitter": "0.0.1",
+    "tns-core-modules": "^2.3.0",
+    "util": "^0.10.3"
+  },
+  "devDependencies": {
+    "babel-traverse": "6.12.0",
+    "babel-types": "6.11.1",
+    "babylon": "6.8.4",
+    "filewalker": "0.1.2",
+    "lazy": "1.0.11",
+    "nativescript-dev-typescript": "^0.3.2",
+    "typescript": "^1.8.10"
+  }
+}
