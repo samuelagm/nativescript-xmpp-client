@@ -1,0 +1,89 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "@xmpp/xml@^0.0.1",
+        "scope": "@xmpp",
+        "escapedName": "@xmpp%2fxml",
+        "name": "@xmpp/xml",
+        "rawSpec": "^0.0.1",
+        "spec": ">=0.0.1 <0.0.2",
+        "type": "range"
+      },
+      "C:\\APPLAB\\MOBILECLIENTS\\nativescript-plugins\\nativescript-xmpp-client"
+    ]
+  ],
+  "_from": "@xmpp/xml@>=0.0.1 <0.0.2",
+  "_id": "@xmpp/xml@0.0.1",
+  "_inCache": true,
+  "_installable": true,
+  "_location": "/@xmpp/xml",
+  "_nodeVersion": "6.8.1",
+  "_npmOperationalInternal": {
+    "host": "packages-16-east.internal.npmjs.com",
+    "tmp": "tmp/xml-0.0.1.tgz_1476635286984_0.604475253727287"
+  },
+  "_npmUser": {
+    "name": "xmpp",
+    "email": "sonny+xmpp@fastmail.net"
+  },
+  "_npmVersion": "3.10.8",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "@xmpp/xml@^0.0.1",
+    "scope": "@xmpp",
+    "escapedName": "@xmpp%2fxml",
+    "name": "@xmpp/xml",
+    "rawSpec": "^0.0.1",
+    "spec": ">=0.0.1 <0.0.2",
+    "type": "range"
+  },
+  "_requiredBy": [
+    "/@xmpp/streamparser",
+    "/nativescript-xmpp-client",
+    "/node-xmpp-core"
+  ],
+  "_resolved": "https://registry.npmjs.org/@xmpp/xml/-/xml-0.0.1.tgz",
+  "_shasum": "2e4e10eabbd3f77bf5e5356a53f231293c81b002",
+  "_shrinkwrap": null,
+  "_spec": "@xmpp/xml@^0.0.1",
+  "_where": "C:\\APPLAB\\MOBILECLIENTS\\nativescript-plugins\\nativescript-xmpp-client",
+  "bugs": {
+    "url": "http://github.com/node-xmpp/node-xmpp/issues"
+  },
+  "dependencies": {
+    "inherits": "^2.0.1",
+    "ltx": "^2.5.0"
+  },
+  "description": "XMPP XML for JavaScript",
+  "devDependencies": {},
+  "directories": {},
+  "dist": {
+    "shasum": "2e4e10eabbd3f77bf5e5356a53f231293c81b002",
+    "tarball": "https://registry.npmjs.org/@xmpp/xml/-/xml-0.0.1.tgz"
+  },
+  "homepage": "https://github.com/node-xmpp/node-xmpp/tree/master/packages/xml",
+  "keywords": [
+    "XMPP",
+    "stanza",
+    "iq",
+    "message",
+    "presence"
+  ],
+  "license": "ISC",
+  "maintainers": [
+    {
+      "name": "xmpp",
+      "email": "sonny+xmpp@fastmail.net"
+    }
+  ],
+  "name": "@xmpp/xml",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/node-xmpp/node-xmpp.git"
+  },
+  "scripts": {},
+  "version": "0.0.1"
+}

@@ -1,0 +1,85 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "@xmpp/streamparser@^0.0.1",
+        "scope": "@xmpp",
+        "escapedName": "@xmpp%2fstreamparser",
+        "name": "@xmpp/streamparser",
+        "rawSpec": "^0.0.1",
+        "spec": ">=0.0.1 <0.0.2",
+        "type": "range"
+      },
+      "C:\\APPLAB\\MOBILECLIENTS\\nativescript-plugins\\nativescript-xmpp-client\\demo\\node_modules\\node-xmpp-core"
+    ]
+  ],
+  "_from": "@xmpp/streamparser@>=0.0.1 <0.0.2",
+  "_id": "@xmpp/streamparser@0.0.1",
+  "_inCache": true,
+  "_installable": true,
+  "_location": "/@xmpp/streamparser",
+  "_nodeVersion": "6.8.1",
+  "_npmOperationalInternal": {
+    "host": "packages-16-east.internal.npmjs.com",
+    "tmp": "tmp/streamparser-0.0.1.tgz_1476635287048_0.8055271299090236"
+  },
+  "_npmUser": {
+    "name": "xmpp",
+    "email": "sonny+xmpp@fastmail.net"
+  },
+  "_npmVersion": "3.10.8",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "@xmpp/streamparser@^0.0.1",
+    "scope": "@xmpp",
+    "escapedName": "@xmpp%2fstreamparser",
+    "name": "@xmpp/streamparser",
+    "rawSpec": "^0.0.1",
+    "spec": ">=0.0.1 <0.0.2",
+    "type": "range"
+  },
+  "_requiredBy": [
+    "/node-xmpp-core"
+  ],
+  "_resolved": "https://registry.npmjs.org/@xmpp/streamparser/-/streamparser-0.0.1.tgz",
+  "_shasum": "2d55d61a315f78a615a3dbb0b4509f190635b0cf",
+  "_shrinkwrap": null,
+  "_spec": "@xmpp/streamparser@^0.0.1",
+  "_where": "C:\\APPLAB\\MOBILECLIENTS\\nativescript-plugins\\nativescript-xmpp-client\\demo\\node_modules\\node-xmpp-core",
+  "bugs": {
+    "url": "http://github.com/node-xmpp/node-xmpp/issues"
+  },
+  "dependencies": {
+    "@xmpp/xml": "^0.0.1",
+    "ltx": "^2.5.0"
+  },
+  "description": "XMPP stream parser for JavaScript",
+  "devDependencies": {},
+  "directories": {},
+  "dist": {
+    "shasum": "2d55d61a315f78a615a3dbb0b4509f190635b0cf",
+    "tarball": "https://registry.npmjs.org/@xmpp/streamparser/-/streamparser-0.0.1.tgz"
+  },
+  "homepage": "https://github.com/node-xmpp/node-xmpp/tree/master/packages/streamparser",
+  "keywords": [
+    "XMPP",
+    "stream",
+    "parser"
+  ],
+  "license": "ISC",
+  "maintainers": [
+    {
+      "name": "xmpp",
+      "email": "sonny+xmpp@fastmail.net"
+    }
+  ],
+  "name": "@xmpp/streamparser",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/node-xmpp/node-xmpp.git"
+  },
+  "scripts": {},
+  "version": "0.0.1"
+}

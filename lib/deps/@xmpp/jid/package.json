@@ -1,0 +1,85 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "@xmpp/jid@^0.0.1",
+        "scope": "@xmpp",
+        "escapedName": "@xmpp%2fjid",
+        "name": "@xmpp/jid",
+        "rawSpec": "^0.0.1",
+        "spec": ">=0.0.1 <0.0.2",
+        "type": "range"
+      },
+      "C:\\APPLAB\\MOBILECLIENTS\\nativescript-plugins\\nativescript-xmpp-client"
+    ]
+  ],
+  "_from": "@xmpp/jid@>=0.0.1 <0.0.2",
+  "_id": "@xmpp/jid@0.0.1",
+  "_inCache": true,
+  "_installable": true,
+  "_location": "/@xmpp/jid",
+  "_nodeVersion": "6.8.1",
+  "_npmOperationalInternal": {
+    "host": "packages-16-east.internal.npmjs.com",
+    "tmp": "tmp/jid-0.0.1.tgz_1476628922306_0.30199363688006997"
+  },
+  "_npmUser": {
+    "name": "xmpp",
+    "email": "sonny+xmpp@fastmail.net"
+  },
+  "_npmVersion": "3.10.8",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "@xmpp/jid@^0.0.1",
+    "scope": "@xmpp",
+    "escapedName": "@xmpp%2fjid",
+    "name": "@xmpp/jid",
+    "rawSpec": "^0.0.1",
+    "spec": ">=0.0.1 <0.0.2",
+    "type": "range"
+  },
+  "_requiredBy": [
+    "/nativescript-xmpp-client",
+    "/node-xmpp-core"
+  ],
+  "_resolved": "https://registry.npmjs.org/@xmpp/jid/-/jid-0.0.1.tgz",
+  "_shasum": "c82c3cb6d7fd76637f2f97aec2e0c68942aab0a1",
+  "_shrinkwrap": null,
+  "_spec": "@xmpp/jid@^0.0.1",
+  "_where": "C:\\APPLAB\\MOBILECLIENTS\\nativescript-plugins\\nativescript-xmpp-client",
+  "bugs": {
+    "url": "http://github.com/node-xmpp/node-xmpp/issues"
+  },
+  "dependencies": {},
+  "description": "XMPP identifiers (JID) for JavaScript",
+  "devDependencies": {},
+  "directories": {},
+  "dist": {
+    "shasum": "c82c3cb6d7fd76637f2f97aec2e0c68942aab0a1",
+    "tarball": "https://registry.npmjs.org/@xmpp/jid/-/jid-0.0.1.tgz"
+  },
+  "homepage": "https://github.com/node-xmpp/node-xmpp/tree/master/packages/jid",
+  "keywords": [
+    "XMPP",
+    "JID"
+  ],
+  "license": "ISC",
+  "maintainers": [
+    {
+      "name": "xmpp",
+      "email": "sonny+xmpp@fastmail.net"
+    }
+  ],
+  "name": "@xmpp/jid",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/node-xmpp/node-xmpp.git"
+  },
+  "scripts": {
+    "bundle": "../../node_modules/.bin/browserify index.js -s JID -o bundle.js",
+    "prepublish": "npm run bundle"
+  },
+  "version": "0.0.1"
+}

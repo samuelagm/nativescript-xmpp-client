@@ -1,5 +1,10 @@
 <Page xmlns="http://schemas.nativescript.org/tns.xsd" loaded="pageLoaded">
   <StackLayout>
     <Label text="{{ message }}" class="message" textWrap="true"/>
+    <GridLayout rows="auto, auto" columns="auto, *, auto">
+      <Label text="Server" col="0" row="0" textWrap="true"/>
+      <TextField col="1" row="0" id="server" text="{{serverAddress}}"/>
+      <Button col="2" row="0" tap="connect" text="Connect"/>
+    </GridLayout>
   </StackLayout>
 </Page>
