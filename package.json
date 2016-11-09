@@ -1,7 +1,7 @@
 {
   "name": "nativescript-xmpp-client",
   "version": "1.0.0",
-  "description": "Your awesome NativeScript plugin.",
+  "description": "XMPP websocket client plugin for Nativescript.",
   "main": "xmpp-client.js",
   "typings": "index.d.ts",
   "nativescript": {
@@ -26,12 +26,14 @@
   "keywords": [
     "NativeScript",
     "JavaScript",
+    "XMPP",
+    "WebSocket",
     "Android",
     "iOS"
   ],
   "author": {
-    "name": "Your Name",
-    "email": "youremail@yourdomain.com"
+    "name": "Samuel Agbonkpolo",
+    "email": "samuelagm@gmail.com"
   },
   "bugs": {
     "url": "https://github.com/samuelagm/nativescript-xmpp-client/issues"
@@ -57,8 +59,7 @@
     "nativescript-websockets": "^1.3.0",
     "net-browserify": "^0.2.4"
   },
-  "readme": "# Develop a NativeScript plugin now (w/ TypeScript)\r\n\r\n## Getting started\r\n\r\n1. `git clone https://github.com/NathanWalker/nativescript-plugin-seed.git myplugin`\r\n2. `npm install -g typescript`\r\n3. `cd myplugin`\r\n4. `npm run postclone`\r\n5. `npm run setup`\r\n6. Get to work.\r\n\r\nThis seed expands on several things [presented here](http://developer.telerik.com/featured/creating-nativescript-plugins-in-typescript/).\r\n\r\n## Usage\r\n\r\nThe seed is prepared to allow you to test and try out your plugin via the `demo` folder.\r\nAdditionally it provides a proper `.gitignore` to keep GitHub tidy as well as `.npmignore` to ensure everyone is happy when you publish your plugin via npm.\r\n\r\n### Linking to CocoaPod or Android Arsenal plugins\r\n\r\nYou will want to create these folders and files in the root:\r\n\r\n```\r\nplatforms --\r\n  ios --\r\n    Podfile\r\n  android --\r\n    include.gradle\r\n```\r\n\r\nDoing so will open up those native apis to your plugin :)\r\n\r\nTake a look at these existing plugins for how that can be done very simply:\r\n\r\n* [nativescript-cardview](https://github.com/bradmartin/nativescript-cardview/tree/master/platforms)\r\n* [nativescript-floatingactionbutton](https://github.com/bradmartin/nativescript-floatingactionbutton/tree/master/platforms)\r\n\r\n### Typical development workflow:\r\n\r\n1. Make changes to plugin files\r\n2. Make changes in `demo` that would test those changes out\r\n3. `npm run demo.ios` or `npm run demo.android`  **(must be run from the root directory)**\r\n\r\nThose `demo` tasks are just general helpers. You may want to have more granular control on the device and/or emulator you want to run. For that, you can just run things the manual way:\r\n\r\n```\r\ncd demo\r\n\r\n// when developing, to ensure the latest code is built into the demo, it's a guarantee to remove the plugin and add it back\r\ntns plugin remove nativescript-xmpp-client\r\ntns plugin add ..\r\n\r\n// manual platform adds\r\ntns platform add ios\r\n// and/or\r\ntns platform add android\r\n```\r\n\r\nThen use any of the available options from the `tns` command line:\r\n\r\n* [Emulate your project](https://github.com/NativeScript/nativescript-cli#emulate-your-project)\r\n* [Run your project](https://github.com/NativeScript/nativescript-cli#run-your-project)\r\n* [Full list of commands](https://github.com/NativeScript/nativescript-cli#the-commands)\r\n\r\n## Publish\r\n\r\nWhen you have everything ready to publish:\r\n\r\n* Bump the version number in `package.json`\r\n* `npm run build` - **very important** - ensure the latest is built **before** you publish\r\n* `npm publish`\r\n\r\n## Contributing - Want to make the seed better?\r\n\r\nOr at least help keep it up to date with NativeScript releases, which would be excellent.\r\n\r\n```\r\nnpm install -g typescript  // if you don't already have it\r\ngit clone https://github.com/NathanWalker/nativescript-plugin-seed\r\ncd nativescript-plugin-seed\r\n\r\n// Improve!\r\n```\r\n",
-  "_id": "nativescript-xmpp-client@1.0.0",
+   "_id": "nativescript-xmpp-client@1.0.0",
   "_shasum": "408b8726d830a299ead191d8c89777d71036f619",
   "_from": "..",
   "_resolved": "file:.."
