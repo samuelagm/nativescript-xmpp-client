@@ -8,7 +8,7 @@
 
 ## Usage
 
-```
+``` ts
 import {Client, IQ} from "nativescript-xmpp-client";
 
 ....

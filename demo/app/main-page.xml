@@ -1,15 +1,32 @@
 <Page xmlns="http://schemas.nativescript.org/tns.xsd" loaded="pageLoaded">
-  <StackLayout>
-    <Label text="{{ message }}" class="message" textWrap="true"/>
-    <GridLayout rows="auto, *" columns="auto, *, auto">
-      <Label text="Server" col="0" row="0" textWrap="true"/>
-      <TextField col="1" row="0" id="server" text="{{serverAddress}}"/>
-      <Button col="2" row="0" tap="connect" text="Connect"/>
-      <ListView items="{{ jids }}" row="1" colspan="3" itemTap="onItemTap">
-        <ListView.itemItemplate>
-          <Label text="{{ $value }}"/>
-        </ListView.itemItemplate>
-      </ListView>
+    <GridLayout rows="auto, *, 3*, auto" columns="*" horizontalAlignment="stretch">
+
+        <StackLayout row="0" col="0" orientation="horizontal" visibility="{{!connected?'visible':'collapsed'}}">
+            <Label text="Server" textWrap="true"/>
+            <TextField id="server" text="{{serverAddress}}"/>
+            <Button tap="connect" text="Connect"/>
+        </StackLayout>
+
+        <ListView items="{{ jids }}" row="1" col="0" itemTap="onItemTap">
+            <ListView.itemItemplate>
+                <StackLayout>
+                    <Label text="{{ $value }}"/>
+                </StackLayout>
+            </ListView.itemItemplate>
+        </ListView>
+
+        <ListView items="{{ messages }}" row="2" col="0" itemTap="onItemTap" id="messageList">
+            <ListView.itemItemplate>
+                <StackLayout>
+                    <Label text="{{ $value }}"/>
+                </StackLayout>
+            </ListView.itemItemplate>
+        </ListView>
+
+        <StackLayout row="3" col="0" orientation="horizontal" horizontalAlignment="stretch" visibility="{{connected?'visible':'collapsed'}}">
+            <TextField text="{{message}}" hint="Message" id="messageInput"/>
+            <Button tap="sendMessage" text="Send"/>
+        </StackLayout>
+
     </GridLayout>
-  </StackLayout>
 </Page>

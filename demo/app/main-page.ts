@@ -4,37 +4,44 @@ import * as pages from "ui/page";
 import {Client} from "nativescript-xmpp-client";
 import {Stanza} from "nativescript-xmpp-client";
 import {IQ} from "nativescript-xmpp-client";
-
+import listViewModule = require("ui/list-view");
 
 class MainPage {
 
-    private model: Observable
+    private model: Observable;
+    private selectedJID: string;
+    private clientInstance: any;
+    private connected: boolean;
+
     pageLoaded = (args: observable.EventData) => {
         // Get the event sender
         let page = <pages.Page>args.object;
-        this.model = new observable.Observable();
+        this.model = new observable.Observable({"connected": false, message: "", serverAddress: "192.168.8.102"});
         //let jids = new observableArray.ObservableArray([{client:"meow", fullJID:"meow@gg.com"}]);
         let jids = new observableArray.ObservableArray();
+        let messages = new observableArray.ObservableArray();
         this.model.set("jids", jids);
+        this.model.set("messages", messages);
         page.bindingContext = this.model;
     }
 
     registerClient = (serverAddress: string) => {
-        var client1 = new Client({
+        let id = Math.random() * (100000 - 1) + 1;
+
+        this.clientInstance = new Client({
             websocket: {url: `ws://${serverAddress}:5280`},
-            jid: `client2@${serverAddress}`,
+            jid: `client${id}@${serverAddress}`,
             password: 'secret'
         });
 
-        client1.on('online', (data) => {
-            //console.dir(data);
+        this.clientInstance.on('online', (data) => {
+            this.connected = true;
+            this.model.set("connected", true);
             let iq = new IQ({from: data.jid, type: 'get', id: 'rand'}).c('query', {xmlns: 'jabber:iq:roster'});
-            //console.log(iq.root().toString());
-            client1.send(iq);
-            //client1.send(new Stanza('message', { to: 'client1@localhost/e35da80401810885bcafbe5bbcafd431' }).c('body').t('HelloWorld'))
+            this.clientInstance.send(iq);
         });
 
-        client1.on('stanza', (stanza) => {
+        this.clientInstance.on('stanza', (stanza) => {
             if (stanza.is("iq")) {
                 let jsonStanza = stanza.toJSON();
                 if (typeof jsonStanza.children[0].children[0] !== 'undefined') {
@@ -42,24 +49,45 @@ class MainPage {
                     this.model.get("jids").push(jid);
                     console.log(jid);
                 }
+            } else if (stanza.is("message")) {
+                let jsonStanza = stanza.toJSON();
+                console.dir(jsonStanza);
+                this.selectedJID = jsonStanza.attrs.from
+                this.model.get("messages").push(jsonStanza.children[0].children[0])
             }
         });
 
-        client1.on('error', (error) => {
+        this.clientInstance.on('error', (error) => {
             console.log('client2', error);
             console.dir(error);
         })
     }
 
-    listViewItemTap = (args) => {
-
+    onItemTap = (args: listViewModule.ItemEventData) => {
+        listViewModule.ListView.se
+        let jids = this.model.get("jids");
+        console.dir(jids._array);
+        this.selectedJID = jids._array[args.index];
     }
 
     connect = (args: observable.EventData) => {
+        if (!this.connected) {
+            let page = <pages.Page>args.object;
+            let address = page.bindingContext.get("serverAddress");
+            this.registerClient(address);
+        }
+    }
+
+    sendMessage = (args: observable.EventData) => {
+        console.log(this.selectedJID);
+        this.model.get("messages").push(this.model.get("message"));
+        this.clientInstance.send(new Stanza('message', {to: this.selectedJID})
+            .c('body')
+            .t(this.model.get("message")));
+        this.model.set("message", "");
         let page = <pages.Page>args.object;
-        let address = page.bindingContext.get("serverAddress");
-        console.dir(address);
-        this.registerClient(address);
+        let messageList = <listViewModule.ListView>page.getViewById("messageList");
+        messageList.scrollToIndex(this.model.get("jids")._array.length);
     }
 }
 
