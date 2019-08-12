@@ -49,16 +49,17 @@
     "rimraf": "^2.5.0"
   },
   "dependencies": {
-    "debug": "^2.2.0",
-    "ltx-ea": "^2.5.1",
-    "md5.js": "^1.3.3",
-    "util": "^0.10.3",
-    "inherits": "^2.0.3",
+    "@types/node": "^10.12.21",
     "@xmpp/jid": "^0.0.1",
     "@xmpp/xml": "^0.0.1",
-    "base64-js":"1.2.0",
+    "base64-js": "1.2.0",
+    "debug": "^2.2.0",
+    "inherits": "^2.0.3",
+    "ltx-ea": "^2.5.1",
+    "md5.js": "^1.3.3",
     "nativescript-websockets": "^1.3.0",
-    "net-browserify": "^0.2.4"
+    "net-browserify": "^0.2.4",
+    "util": "^0.10.3"
   },
   "_id": "nativescript-xmpp-client@1.0.0",
   "_shasum": "408b8726d830a299ead191d8c89777d71036f619",

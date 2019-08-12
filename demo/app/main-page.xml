@@ -1,32 +1,6 @@
-<Page xmlns="http://schemas.nativescript.org/tns.xsd" loaded="pageLoaded">
-    <GridLayout rows="auto, *, 3*, auto" columns="*" horizontalAlignment="stretch">
-
-        <StackLayout row="0" col="0" orientation="horizontal" visibility="{{!connected?'visible':'collapsed'}}">
-            <Label text="Server" textWrap="true"/>
-            <TextField id="server" text="{{serverAddress}}"/>
-            <Button tap="connect" text="Connect"/>
-        </StackLayout>
-
-        <ListView items="{{ jids }}" row="1" col="0" itemTap="onItemTap">
-            <ListView.itemItemplate>
-                <StackLayout>
-                    <Label text="{{ $value }}"/>
-                </StackLayout>
-            </ListView.itemItemplate>
-        </ListView>
-
-        <ListView items="{{ messages }}" row="2" col="0" itemTap="onItemTap" id="messageList">
-            <ListView.itemItemplate>
-                <StackLayout>
-                    <Label text="{{ $value }}"/>
-                </StackLayout>
-            </ListView.itemItemplate>
-        </ListView>
-
-        <StackLayout row="3" col="0" orientation="horizontal" horizontalAlignment="stretch" visibility="{{connected?'visible':'collapsed'}}">
-            <TextField text="{{message}}" hint="Message" id="messageInput"/>
-            <Button tap="sendMessage" text="Send"/>
-        </StackLayout>
-
-    </GridLayout>
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" loaded="pageLoaded" class="page"
+  xmlns:ui="nativescript-xmpp-client">
+  <StackLayout class="p-20">
+    <Label text="{{ message }}" class="t-20 text-center c-black" textWrap="true"/>
+  </StackLayout>
 </Page>
